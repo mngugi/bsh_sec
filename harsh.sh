@@ -6,6 +6,7 @@ hash_password() {
     echo -n "$1" | md5sum | awk '{print $1}'
 }
 
+# Check if required arguments are provided 
 if [$# -ne 2]; then
     echo "Useage: <password> <dictionary_file>"
     exit
