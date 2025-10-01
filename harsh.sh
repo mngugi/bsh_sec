@@ -57,3 +57,15 @@ done < "$dictionary_file"
 
 echo "No match found in dictionary."
 exit 4
+
+#Notes / suggestions:
+
+#If you actually have the hash instead of the plaintext password,
+#pass the hash directly and alter the script to skip computing target_
+#hash from plaintext (I can provide that variant).
+
+#For real password cracking use tools like hashcat or john — they’re
+#optimized and support salts, hashing modes, GPUs, rules, etc.
+
+#MD5 is not secure for password storage. For defensive work or storage,
+#prefer bcrypt / scrypt / Argon2.
